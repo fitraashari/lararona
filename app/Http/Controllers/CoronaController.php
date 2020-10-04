@@ -130,7 +130,7 @@ class CoronaController extends Controller
     public function req($url){
         try {
             $client = new GuzzleHttp\Client([
-                'timeout'  => 5.0,
+                'timeout'  => 30.0,
             ]);
             //ambil data json
             $response = $client->request('GET', $url);
