@@ -1,0 +1,71 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Lararona",
+        "description": "COVID19 Indonesia OpenApi <br>Data Source : \n * https://data.covid19.go.id/public/api/prov.json & \n * https://data.covid19.go.id/public/api/update.json",
+        "contact": {
+            "email": "fitra.drive@gmail.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/prov": {
+            "get": {
+                "tags": [
+                    "Berdasarkan Provinsi"
+                ],
+                "description": "Ambil Data COVID19 seluruh Provinsi di Indonesia",
+                "operationId": "App\\Http\\Controllers\\CoronaController::daily",
+                "responses": {
+                    "200": {
+                        "description": "successful"
+                    }
+                }
+            }
+        },
+        "/api/prov/{id}": {
+            "get": {
+                "tags": [
+                    "Berdasarkan Provinsi"
+                ],
+                "description": "Ambil Data COVID19 Provinsi di Indonesia berdasarkan ID",
+                "operationId": "App\\Http\\Controllers\\CoronaController::daily",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "id provinsi",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful"
+                    }
+                }
+            }
+        },
+        "/api/update": {
+            "get": {
+                "tags": [
+                    "Data Terupdate Harian"
+                ],
+                "description": "Ambil Data COVID19 perhari hingga hari ini",
+                "operationId": "App\\Http\\Controllers\\CoronaController::daily",
+                "responses": {
+                    "200": {
+                        "description": "successful"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,52 @@ use Illuminate\Support\Facades\Storage;
 
 class CoronaController extends Controller
 {
+/**
+ * @OA\Info(
+ *      version="1.0.0",
+ *      title="Lararona",
+ *      description="COVID19 Indonesia OpenApi <br>Data Source : 
+ * https://data.covid19.go.id/public/api/prov.json & 
+ * https://data.covid19.go.id/public/api/update.json",
+ *      @OA\Contact(
+ *          email="fitra.drive@gmail.com"
+ *      ),
+ *     @OA\License(
+ *         name="Apache 2.0",
+ *         url="http://www.apache.org/licenses/LICENSE-2.0.html"
+ *     )
+ * )
+ */
+/**
+ * @OA\Get(
+ *     path="/api/prov",
+ *     tags={"Berdasarkan Provinsi"},
+ *     description="Ambil Data COVID19 seluruh Provinsi di Indonesia",
+ *     @OA\Response(response=200, description="successful")
+ * )
+ * @OA\Get(
+ *     path="/api/prov/{id}",
+ *     tags={"Berdasarkan Provinsi"},
+ *     description="Ambil Data COVID19 Provinsi di Indonesia berdasarkan ID",
+ *      @OA\Parameter(
+     *         name="id",
+     *         in="path",
+     *         description="id provinsi",
+     *         required=true,
+     *         @OA\Schema(
+     *             type="integer",
+     *             format="int64"
+     *         )
+     *     ),
+ *     @OA\Response(response=200, description="successful")
+ * )
+ * * @OA\Get(
+ *     tags={"Data Terupdate Harian"},
+ *     path="/api/update",
+ *     description="Ambil Data COVID19 perhari hingga hari ini",
+ *     @OA\Response(response=200, description="successful")
+ * )
+ */
     public function daily(){
         $data = $this->req('https://data.covid19.go.id/public/api/update.json');
         if($data){
