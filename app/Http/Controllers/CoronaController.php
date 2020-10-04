@@ -15,7 +15,7 @@ class CoronaController extends Controller
  *      version="1.0.0",
  *      title="Lararona",
  *      description="COVID19 Indonesia OpenApi <br>Data Source : 
- * https://data.covid19.go.id/public/api/prov.json & 
+ * https://data.covid19.go.id/public/api/prov.json
  * https://data.covid19.go.id/public/api/update.json",
  *      @OA\Contact(
  *          email="fitra.drive@gmail.com"

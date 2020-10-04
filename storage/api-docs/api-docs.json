@@ -2,7 +2,7 @@
     "openapi": "3.0.0",
     "info": {
         "title": "Lararona",
-        "description": "COVID19 Indonesia OpenApi <br>Data Source : \n * https://data.covid19.go.id/public/api/prov.json & \n * https://data.covid19.go.id/public/api/update.json",
+        "description": "COVID19 Indonesia OpenApi <br>Data Source : \n * https://data.covid19.go.id/public/api/prov.json\n * https://data.covid19.go.id/public/api/update.json",
         "contact": {
             "email": "fitra.drive@gmail.com"
         },
