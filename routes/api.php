@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('/prov','CoronaController@prov');
 Route::get('/prov/{id}','CoronaController@show');
+route::get('/update','CoronaController@daily');
+route::get('/update/now','CoronaController@current');
 

@@ -15,8 +15,8 @@ class CreateCoronasTable extends Migration
     {
         Schema::create('coronas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('last_date');
-            $table->json('list_data');
+            $table->string('type');
+            $table->json('json');
             $table->timestamps();
         });
     }
