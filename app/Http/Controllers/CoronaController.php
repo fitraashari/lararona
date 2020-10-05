@@ -14,7 +14,7 @@ class CoronaController extends Controller
  * @OA\Info(
  *      version="1.0.0",
  *      title="Lararona",
- *      description="COVID19 Indonesia OpenApi <br>Data Source : 
+ *      description="COVID19 Indonesia OpenApi <br> Enable Cross-Origin Resource Sharing (CORS) <br>Data Source : 
  * https://data.covid19.go.id/public/api/prov.json
  * https://data.covid19.go.id/public/api/update.json",
  *      @OA\Contact(
