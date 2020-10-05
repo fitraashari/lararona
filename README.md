@@ -4,7 +4,7 @@ COVID19 Indonesia OpenApi
 
 Enable Cross-Origin Resource Sharing (CORS)
 
-[URL Documentattion](http://powerful-thicket-86677.herokuapp.com/api/documentation)
+[URL Documentation](http://powerful-thicket-86677.herokuapp.com/api/documentation)
 
 # Data Source :
 
